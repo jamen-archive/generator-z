@@ -10,7 +10,7 @@ npm i -g generator-z
 ## Usage
 Just call `z` first, then list more generators after it.
 ```
-$ yo z backbone, angular, devjs:babel
+$ yo z backbone example, angular example, devjs:babel
 ```
 
 ## License

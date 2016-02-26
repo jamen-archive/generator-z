@@ -1,15 +1,14 @@
 var generator = require('yeoman-generator');
-var argv = process.argv.slice(3);
+var minimist = require('minimist');
+var args = process.argv.slice(3);
 
 var Z = generator.Base.extend({
   initializing: function() {
-    if (argv) {
+    if (args) {
       var stop = /,$/;
       var gens = [];
       var temp = [];
-      var stun;
-
-      argv.forEach(arg => {
+      args.forEach(arg => {
         temp.push(arg);
         if (stop.test(arg)) {
           temp[temp.length-1] = temp[temp.length-1].slice(0, -1);
@@ -19,9 +18,13 @@ var Z = generator.Base.extend({
       });
       gens.push(temp);
 
+      var minicli = [];
       gens.forEach(gen => {
-        this.composeWith(gen[0], { args: gen.slice(1) });
+        minicli = minimist(gen);
+        this.composeWith(gen[0], { args: minicli._, options: minicli });
       });
+    } else {
+      console.log('Hello world!');
     }
   }
 });

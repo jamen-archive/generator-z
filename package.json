@@ -20,5 +20,8 @@
   ],
   "devDependencies": {
     "yeoman-generator": "^0.22.5"
+  },
+  "dependencies": {
+    "minimist": "^1.2.0"
   }
 }
