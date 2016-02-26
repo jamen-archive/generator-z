@@ -1,0 +1,24 @@
+{
+  "name": "generator-z",
+  "version": "1.0.0",
+  "description": "Multiplex yeoman generators.",
+  "main": "app/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/generator-x"
+  },
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "author": "Jamen Marzonie <jamenmarz@gmail.com> (http://jamenmarz.com/)",
+  "license": "MIT",
+  "files": [
+    "app"
+  ],
+  "devDependencies": {
+    "yeoman-generator": "^0.22.5"
+  }
+}
