@@ -1,10 +1,11 @@
 var generator = require('yeoman-generator');
 var minimist = require('minimist');
+var yosay = require('yosay');
 var args = process.argv.slice(3);
 
 var Z = generator.Base.extend({
   initializing: function() {
-    if (args) {
+    if (args.length) {
       var stop = /,$/;
       var gens = [];
       var temp = [];
@@ -24,7 +25,10 @@ var Z = generator.Base.extend({
         this.composeWith(gen[0], { args: minicli._, options: minicli });
       });
     } else {
-      console.log('Hello world!');
+      console.log(yosay(
+        'Use this generator by supplying more generators after it:\n' +
+        'yo z foo, bar, baz'
+      ));
     }
   }
 });

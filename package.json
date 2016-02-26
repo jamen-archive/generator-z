@@ -19,7 +19,8 @@
     "app"
   ],
   "devDependencies": {
-    "yeoman-generator": "^0.22.5"
+    "yeoman-generator": "^0.22.5",
+    "yosay": "^1.1.0"
   },
   "dependencies": {
     "minimist": "^1.2.0"
